@@ -38,6 +38,15 @@ public class ArrayOps {
     return sum;
   }
 
+  public static int[] sumCols(int[][] matrix) {
+    int[] sumCols = new int[matrix[0].length];
+    for (int i = 0; i < matrix[0].length; i++) {
+      for (int j = 0; j < matrix.length; j++) {
+        sumCols[i] += matrix[j][i];
+      }
+    }
+    return sumCols;
+  }
 
   public static String arrToString(int[] arr) {
     String sArr = "{" ;

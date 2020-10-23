@@ -32,7 +32,11 @@ public class ArrayOps {
     return arr_1D;
   }
 
-
+  public static int sum(int[][] arr) {
+    int[] arr_1D = sumRows(arr);
+    int sum = sum(arr_1D);
+    return sum;
+  }
 
 
   public static String arrToString(int[] arr) {

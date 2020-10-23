@@ -10,5 +10,6 @@ public class Tester {
     String arrS2 = ArrayOps.arrToString(arr4);
     System.out.println(arrS);
     System.out.println(arrS2);
+    System.out.println(ArrayOps.sum(arr2));
   }
 }

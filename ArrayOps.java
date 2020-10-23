@@ -48,6 +48,16 @@ public class ArrayOps {
     return sumCols;
   }
 
+  public static boolean isRowMagic(int[][] matrix) {
+    boolean isSameSum = true;
+    for (int i = 1; i < matrix.length; i++) {
+      int sumNow = sum(matrix[i]);
+      int sumBefore = sum(matrix[i-1]);
+      if (sumNow != sumBefore) isSameSum = false;
+    }
+    return isSameSum;
+  }
+
   public static String arrToString(int[] arr) {
     String sArr = "{" ;
     for (int i = 0; i < arr.length; i++) {

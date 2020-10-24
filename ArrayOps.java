@@ -74,6 +74,17 @@ public class ArrayOps {
     return isSameSum;
   }
 
+  public static boolean isLocationMagic(int[][] matrix, int row, int col) {
+    boolean isSameSum = false;
+    int sumRow = sum(matrix[row]);
+    int sumCol = 0;
+    for (int i = 0; i < matrix.length; i++) {
+      sumCol += matrix[i][col];
+    }
+    if (sumRow == sumCol) isSameSum = true;
+    return isSameSum;
+  }
+
   public static String arrToString(int[] arr) {
     String sArr = "{" ;
     for (int i = 0; i < arr.length; i++) {

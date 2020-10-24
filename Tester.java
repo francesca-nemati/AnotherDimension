@@ -4,7 +4,8 @@ public class Tester {
     System.out.println(ArrayOps.sum(arr));
     System.out.println(ArrayOps.largest(arr));
     int[][] arr2 = {{1,2,3}, {1,2,4}};
-    int[][] arr6 = {{1,3,3}, {1,2,4}, {7}};
+    int[][] arr6 = {{1,3,3}, {1,2,4}, {-1,5,3}};
+    int[][] arr7 = {{1,1,1}, {2,2,2}, {3,3,3}};
     int[] arr3 = ArrayOps.sumRows(arr2);
     int[] arr4 = ArrayOps.largestInRows(arr2);
     int[] arr5 = ArrayOps.sumCols(arr2);
@@ -17,5 +18,7 @@ public class Tester {
     System.out.println(arrS3);
     System.out.println(ArrayOps.isRowMagic(arr2));
     System.out.println(ArrayOps.isRowMagic(arr6));
+    System.out.println(ArrayOps.isColMagic(arr2));
+    System.out.println(ArrayOps.isColMagic(arr7));
   }
 }

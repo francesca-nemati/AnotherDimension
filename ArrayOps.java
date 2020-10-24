@@ -58,6 +58,22 @@ public class ArrayOps {
     return isSameSum;
   }
 
+  public static boolean isColMagic(int[][] matrix) {
+    boolean isSameSum = true;
+    int sNow = 0;
+    int sBefore = 0;
+    for (int i = 1; i < matrix[0].length; i++) {
+      for (int j = 0; j < matrix.length; j++) {
+        sNow += matrix[j][i];
+        sBefore += matrix[j][i-1];
+      }
+      if (sNow != sBefore) isSameSum = false;
+      sNow = 0;
+      sBefore = 0;
+    }
+    return isSameSum;
+  }
+
   public static String arrToString(int[] arr) {
     String sArr = "{" ;
     for (int i = 0; i < arr.length; i++) {

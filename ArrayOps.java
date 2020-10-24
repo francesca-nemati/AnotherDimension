@@ -85,25 +85,4 @@ public class ArrayOps {
     return isSameSum;
   }
 
-  public static String arrToString(int[] arr) {
-    String sArr = "{" ;
-    for (int i = 0; i < arr.length; i++) {
-      if (i != arr.length-1) sArr = sArr + arr[i] + ", ";
-      else sArr = sArr + arr[i];
-    }
-    sArr = sArr + "}";
-    return sArr;
-  }
-
-  public static String arrayDeepToString(int[][] arr) {
-    String sDArr = "{";
-    for (int i = 0; i < arr.length; i++) {
-      if (i != arr.length-1) sDArr = sDArr + arrToString(arr[i]) + ", ";
-      else sDArr = sDArr + arrToString(arr[i]);
-    }
-    sDArr = sDArr + "}";
-    return sDArr;
-  }
-
-
 }
